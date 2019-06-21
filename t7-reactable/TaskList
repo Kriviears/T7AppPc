@@ -1,0 +1,14 @@
+State.currentCharacter now responds to clicking on a CharacterCard
+
+Actualize what a character page looks like
+    *exists as a distiguable thing
+
+Make <CharacterCard/> clickable to route to its character's page
+    Make the banner also route when on a character page
+
+Create RESTful API for character data
+
+Style <CharacterCard/> to be a card
+
+Style <CharacterListMain/> to justify content (CharacterCards) correctly
+
