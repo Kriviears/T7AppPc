@@ -10,6 +10,8 @@ export default class CharacterPageMain extends Component{
         }
     }
 
+    
+
     static contextType = TekkenContext;
 
     render(){

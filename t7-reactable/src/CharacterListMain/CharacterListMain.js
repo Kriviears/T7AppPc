@@ -24,6 +24,8 @@ export default class CharacterListMain extends Component{
                                 to={`/character/${char.name}`}>
                                 <CharacterCard 
                                     name={char.name}
+                                    src={char.src}
+                                    alt={char.alt}
                                 />
                             </Link>
                         </li>

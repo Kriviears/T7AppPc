@@ -11,7 +11,7 @@ export default class CharacterListNav extends Component{
         return(
 
             <div className='CharListNav'>
-                { heading }
+                <h1>Character List</h1>
               {/* <ul className='CharListNav_List'>
                 {characters.map(character => 
                     <li

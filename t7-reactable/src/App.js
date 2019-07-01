@@ -27,6 +27,12 @@ class App extends React.Component {
       currentCharacter: char
     })
   }
+
+  backHome(){
+    this.setState({
+      currentCharacter: {name: ''} 
+    })
+  }
   
 
   renderNavRoutes(){
@@ -65,17 +71,15 @@ class App extends React.Component {
       characters: this.state.characters,
       currentCharacter: this.state.currentCharacter,
       characterSelect: this.characterSelect,
-      gatherData: gatherData
+      gatherData: gatherData,
+      backHome: this.backHome
     }
 
     return (
       <TekkenContext.Provider value={contextValue}>
         <div className="App">
         <header className='App_header'>
-          {/* {this.renderNavRoutes()} */}
-          <Link to='/' onClick={()=>this.characterSelect(0)}>
-            <CharacterListNav/>
-          </Link>
+          {this.renderNavRoutes()}
         </header>
         <body className='App_main'>
           {this.renderMainRoutes()}
