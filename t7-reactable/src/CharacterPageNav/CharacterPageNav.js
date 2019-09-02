@@ -7,13 +7,12 @@ export default class CharacterPageNav extends Component{
     static contextType = TekkenContext;
 
     render(){
-        const { currentCharacter, backHome } = this.context;
         return(
             <>
                 <Link
                     className='CharacterPage__Link'
                     to={`/`}>
-                    <h1>{currentCharacter.name}</h1>
+                    <h1>{this.props.match.params.name}</h1>
                 </Link>
             </>
         )

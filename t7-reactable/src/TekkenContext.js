@@ -3,7 +3,10 @@ import React from 'react'
 const TekkenContext = React.createContext({
     characters: [],
     currentCharacter: {},
-    characterSelect: () => {}
+    setCharacters: () => {},
+    characterSelect: () => {},
+    setCurrentCharacter: () => {},
+    getMoves: () =>{}
 })
 
 export default TekkenContext;

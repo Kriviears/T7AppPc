@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './CharacterPageMain.css'
 import TekkenContext from '../TekkenContext';
-import { characters } from '../DummyData';
+import CharacterApiService from '../services/char-api-service'
+import MoveList from '../MoveList/MoveList';
 
 export default class CharacterPageMain extends Component{
     static defaultProps = {
@@ -10,17 +11,26 @@ export default class CharacterPageMain extends Component{
         }
     }
 
-    
-
     static contextType = TekkenContext;
 
+    componentDidMount(){
+        CharacterApiService.getMoves(this.props.match.params.name)
+          .then(data =>{
+              this.context.getMoves(data)
+          })
+    }
+
     render(){
-        const {gatherData} = this.context;
-        const {name} = this.props.match.params
-        const character = gatherData(characters, name)
         return(
             <div>
-                <h1 className='CharName'>{character.name}</h1>
+
+                <div className='container'>
+
+                </div>
+
+                <div className='container'>
+                    <MoveList name={this.props.match.params.name}/>
+                </div>
             </div>
         )
     }

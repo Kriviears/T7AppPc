@@ -1,14 +1,24 @@
 import React, { Component } from 'react'
 import './CharacterListMain.css'
-import {NavLink, Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CharacterCard from '../CharacterCard/CharacterCard'
 import TekkenContext from '../TekkenContext';
+import CharApiService from '../services/char-api-service';
 
 export default class CharacterListMain extends Component{
     static contextType = TekkenContext
+
     
+
+    componentDidMount(){
+        CharApiService.getCharacters()
+            .then(data=>{
+                this.context.setCharacters(data);
+            });
+    }
+
     render(){
-        const { characters=[], characterSelect} = this.context
+        const { characters, characterSelect } = this.context
         let filteredList = characters
 
         return(
@@ -24,8 +34,8 @@ export default class CharacterListMain extends Component{
                                 to={`/character/${char.name}`}>
                                 <CharacterCard 
                                     name={char.name}
-                                    src={char.src}
-                                    alt={char.alt}
+                                    src={char.thumbnail}
+                                    alt={char.name}
                                 />
                             </Link>
                         </li>

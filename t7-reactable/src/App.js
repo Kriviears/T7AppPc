@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import './App.css';
-import { characters } from './DummyData'
+//import { characters } from './DummyData'
 import TekkenContext from './TekkenContext'
 import {gatherData} from './aux-functions'
 
@@ -16,10 +16,29 @@ import CharacterListNav from './CharacterListNav/CharacterListNav'
 
 class App extends React.Component {
   state = {
-    characters: characters,
-    currentCharacter: {}
+    characters: [],
+    currentCharacter: {},
+    moves: []
   }
 
+  setCharacters = data =>{
+    this.setState({
+      characters: data
+    })
+  }
+
+  getMoves = data =>{
+    this.setState({
+      moves: data
+    })
+  }
+
+  setCurrentCharacter = name => {
+    let current = this.state.characters.filter(char => char.name === name);
+    this.setState({
+      currentCharacter: current
+    })
+  }
 
   characterSelect = i =>{
     const char = this.state.characters[i];
@@ -70,9 +89,13 @@ class App extends React.Component {
     const contextValue = {
       characters: this.state.characters,
       currentCharacter: this.state.currentCharacter,
+      moves: this.state.moves,
       characterSelect: this.characterSelect,
       gatherData: gatherData,
-      backHome: this.backHome
+      backHome: this.backHome,
+      setCharacters: this.setCharacters,
+      setCurrentCharacter: this.setCurrentCharacter,
+      getMoves: this.getMoves
     }
 
     return (

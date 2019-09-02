@@ -5,5 +5,21 @@
     margin: 10px;
     width: 200px;
     height: 300px;
-    background-color: beige;
+    background-color: #f5f5dc0a;
+}
+
+.CharacterPic {
+    max-height: 300px;
+    max-width: 200px;
+} 
+
+img {
+    transform: translateY(-30px);
+    align-self: center;
+    max-height: 250px;
+    max-width: 150px;
+}
+
+.CharacterCard h1{
+    transform: translateY(-10px)
 }
