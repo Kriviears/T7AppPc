@@ -22,15 +22,15 @@ export default class CharacterPageMain extends Component{
 
     render(){
         return(
-            <div>
+            <div className='CharPageMain'>
 
-                <div className='container'>
+                <div className='notes'>
 
                 </div>
 
-                <div className='container'>
-                    <MoveList name={this.props.match.params.name}/>
-                </div>
+                
+                <MoveList name={this.props.match.params.name}/>
+                
             </div>
         )
     }

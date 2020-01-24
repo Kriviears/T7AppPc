@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './move.css'
 import TekkenContext from '../TekkenContext'
 
-export default class Move extends Component{
+export default class Move extends Component {
 
     state = {
         media: this.props.media,
@@ -39,7 +39,7 @@ export default class Move extends Component{
         this.fixProps(this.state)
         return(
             <tr>
-                <td>{this.state.media}</td>
+                {/* <td>{this.state.media}</td> */}
                 <td>{this.state.command}</td>
                 <td>{this.state.startup}</td>
                 <td>{this.state.activeframes}</td>

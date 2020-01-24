@@ -22,9 +22,9 @@ export default class MoveList extends Component{
       return (
         <table className='movelist'>
             <thead>
-                <tr>
-                    <th><h1>{this.props.name}</h1></th>
-                    <th><h1>Move name</h1></th>
+                <tr className='header'>
+                    {/* <th><h1>{this.props.name}</h1></th> */}
+                    <th><h1>Move List</h1></th>
                     <th><h1>startup</h1></th>
                     <th><h1>activeframes</h1></th>
                     <th><h1>on-block</h1></th>
@@ -37,7 +37,7 @@ export default class MoveList extends Component{
                     <th><h1>properties</h1></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id='style-6'>
                 {
                     filteredList.map(move => 
                         <Move
