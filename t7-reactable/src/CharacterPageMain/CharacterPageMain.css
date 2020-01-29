@@ -1,39 +1,39 @@
- .CharPageMain {
-    position:relative; width:1280px;
-} 
-
- .framechart {
-    height: 850px;
-    width: 110%;
-    background: transparent;
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-    margin: 0 auto;
-    position: relative;
-    overflow-y: scroll;
-} 
-
-
-/* #style-6::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+.CharPageMain {
+  position: relative;
+  width: 100%;
+  display: block;
 }
 
-#style-6::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
+.framechart {
+  height: 850px;
+  width: 110%;
+  background: transparent;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  margin: 0 auto;
+  position: relative;
+  overflow-y: scroll;
 }
 
-#style-6::-webkit-scrollbar-thumb
-{
-	background-color: #F90;	
-	background-image: -webkit-linear-gradient(45deg,
-	                                          rgba(255, 255, 255, .2) 25%,
-											  transparent 25%,
-											  transparent 50%,
-											  rgba(255, 255, 255, .2) 50%,
-											  rgba(255, 255, 255, .2) 75%,
-											  transparent 75%,
-											  transparent)
-}  */
+.CharPageMain::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.CharPageMain::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+.CharPageMain::-webkit-scrollbar-thumb {
+  background-color: #f90;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}

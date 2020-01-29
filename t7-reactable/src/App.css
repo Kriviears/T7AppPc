@@ -1,26 +1,25 @@
 .App {
-  --custom-font: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
+  --custom-font: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   display: grid;
-  grid-template-areas: "head head"
-                        "main  main"
-                        "main  main";
+  grid-template-areas:
+    "head head"
+    "main  main"
+    "main  main";
   grid-template-rows: 150px 1fr 30px;
   grid-template-columns: 50% 4fr;
   min-height: 100vh;
 }
 
-
-
 .App_header {
   grid-area: head;
   background-color: #282c34;
   min-height: 15vh;
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -41,4 +40,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+.App::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+.App::-webkit-scrollbar-thumb {
+  background-color: #000000;
 }
