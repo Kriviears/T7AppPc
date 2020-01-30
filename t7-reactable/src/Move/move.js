@@ -21,8 +21,20 @@ export default class Move extends Component {
     return result.value;
   }
   tableRow(target) {
-    return <td>{target}</td>;
+    return <td style={this.calcWidth}>{target}</td>;
   }
+  numberColumns() {
+    var numberTrue = 0;
+    this.props.columns.forEach(column => {
+      if (column.value === true) numberTrue++;
+    });
+    if (numberTrue !== 0) return numberTrue;
+    else return 1;
+  }
+
+  calcWidth = {
+    width: `${100 / this.numberColumns()}%`
+  };
 
   static contextType = TekkenContext;
 
@@ -31,11 +43,10 @@ export default class Move extends Component {
     return (
       <tr>
         {/* <td>{this.props.media}</td> */}
-        <td>{this.props.command}</td>
-        {/* <td>{this.props.startup}</td> */}
+        {this.tableRow(this.props.command)}
+
         {this.showColumn("startup") ? this.tableRow(this.props.startup) : <></>}
-        {/* <td>{this.props.activeframes}</td> */}
-        <td>{this.props.onblock}</td>
+
         {this.showColumn("On block") ? (
           this.tableRow(this.props.onblock)
         ) : (
@@ -68,13 +79,6 @@ export default class Move extends Component {
         ) : (
           <></>
         )}
-        {/* <td>{this.props.onhit}</td>
-        <td>{this.props.attribute}</td>
-        <td>{this.props.recovery}</td>
-        <td>{this.props.damage}</td>
-        <td>{this.props.cancel}</td>
-        <td>{this.props.super_cancel}</td>
-        <td>{this.props.properties}</td> */}
       </tr>
     );
   }

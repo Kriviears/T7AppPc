@@ -15,11 +15,11 @@ export default class CharacterPageNav extends Component {
             to={`/character/${this.props.match.params.name}/framedata`}>
             <h1>Frames </h1>
           </Link>
-          <Link
+          {/* <Link
             className="info"
             to={`/character/${this.props.match.params.name}/info`}>
             <h1>Info</h1>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="Home__button">

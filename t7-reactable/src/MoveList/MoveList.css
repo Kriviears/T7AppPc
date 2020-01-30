@@ -86,7 +86,16 @@
   padding: 10px;
   margin: 0%;
   text-align: left;
-  width: 300px;
+}
+
+.movelist thead,
+.movelist tbody {
+  width: 100%;
+}
+
+.movelist th,
+.movelist th h1 {
+  text-align: left;
 }
 
 .header {
@@ -101,7 +110,14 @@
 }
 
 .movelist thead tr {
-  display: block;
+  display: table;
+  table-layout: fixed;
+}
+
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 /* Background-color of the odd rows */
@@ -121,8 +137,16 @@
 
 .movelist td:first-child {
   color: #fb667a;
-  width: 12.5%;
+  /* width: 9%; */
 }
+
+/* .movelist td {
+  width: 9%;
+}
+
+.movelist td:nth-child(4) {
+  width: 8%;
+} */
 
 /* .movelist th:first-child { width: 500px; } */
 
@@ -176,4 +200,8 @@
     transparent 75%,
     transparent
   );
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

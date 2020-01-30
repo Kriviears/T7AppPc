@@ -18,11 +18,7 @@ export default class MoveList extends Component {
     return result.value;
   }
   tableHeader(target) {
-    return (
-      <th>
-        <h1>{target}</h1>
-      </th>
-    );
+    return <th>{target}</th>;
   }
 
   render() {

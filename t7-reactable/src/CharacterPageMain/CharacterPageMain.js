@@ -13,11 +13,11 @@ export default class CharacterPageMain extends Component {
         { id: 1, label: "startup", value: true },
         { id: 2, label: "On block", value: true },
         { id: 3, label: "On hit", value: true },
-        { id: 4, label: "attribute", value: true },
-        { id: 5, label: "recovery", value: true },
+        { id: 4, label: "attribute", value: false },
+        { id: 5, label: "recovery", value: false },
         { id: 6, label: "damage", value: true },
-        { id: 7, label: "Cancelable?", value: true },
-        { id: 8, label: "Super Cancelable?", value: true },
+        { id: 7, label: "Cancelable?", value: false },
+        { id: 8, label: "Super Cancelable?", value: false },
         { id: 9, label: "Properties", value: true }
       ]
     };
